@@ -9,9 +9,9 @@ https://gist.github.com/octocat/0831f3fbd83ac4d46451gistcomment-2178506
 
  changes to ~/.gitconfig below lines
  ```
-	 [alias]
-	     ...
-	     rewrite-author = !/<path-to-script>/git-rewrite-author.sh
+[alias]
+	...
+	rewrite-author = !/<path-to-script>/git-rewrite-author.sh
 ```
 
  Note: Change the <path-to-script> with the actual path of the script
