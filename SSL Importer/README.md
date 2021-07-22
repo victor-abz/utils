@@ -8,19 +8,19 @@ https://web.archive.org/web/20190831085142/http://nodsw.com/blog/leeland/2006/12
 
 Usage:
 Need to compile, first:
-javac InstallCert.java
+`javac InstallCert.java`
 
 Note: since java 11, you can run it directly without compiling it first:
-java --source 11 InstallCert.java <args>
+`java --source 11 InstallCert.java <args>`
 
 # Access server, and retrieve certificate (accept default certificate 1)
-java InstallCert [--proxy=proxyHost:proxyPort] <host>[:port] [passphrase]
+`java InstallCert [--proxy=proxyHost:proxyPort] <host>[:port] [passphrase]`
 
 # Extract certificate from created jssecacerts keystore
-keytool -exportcert -alias [host]-1 -keystore jssecacerts -storepass changeit -file [host].cer
+`keytool -exportcert -alias [host]-1 -keystore jssecacerts -storepass changeit -file [host].cer`
 
 # Import certificate into system keystore
-keytool -importcert -alias [host] -keystore [path to system keystore] -storepass changeit -file [host].cer
+`keytool -importcert -alias [host] -keystore [path to system keystore] -storepass changeit -file [host].cer`
 
 # Example:
 java InstallCert woot.com:443
